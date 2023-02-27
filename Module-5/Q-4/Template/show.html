@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show Data</title>
+</head>
+<body>
+    <table border="2">
+        <tr>
+          <th>Firstname</th>
+          <th>Lastname</th>
+          <th>Mobile</th>
+          <th>Email</th>
+          <th>Password</th>
+          <th>Repeate Password</th>
+          <th>Address</th>
+          <th>City</th>
+          <th>State</th>
+          <th> Action</th>
+        </tr>
+        {% for st in stdata %}
+        <tr>
+          <td>{{st.firstname}}</td>
+          <td>{{st.lastname}}</td>
+          <td>{{st.mobile}}</td>
+          <td>{{st.email}}</td>
+          <td>{{st.password}}</td>
+          <td>{{st.repeatepassword}}</td>
+          <td>{{st.address}}</td>
+          <td>{{st.city}}</td>
+          <td>{{st.state}}</td>
+          <th><a href="/update/{{st.id}}/" >Update</a>
+          <a href="/delete/{{st.id}}/" >Delete</a></th>
+        </tr>
+        {% endfor %}
+      </table>
+</body>
+</html>

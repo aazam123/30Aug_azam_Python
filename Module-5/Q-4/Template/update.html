@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Insert Data</title>
+</head>
+<body>
+    <form method="post">
+        {% csrf_token %}
+        <input type="text" name="firstname" value="{{id.firstname}}"><br><br>
+        <input type="text" name="lastname" value="{{id.lastname}}"><br><br>
+        <input type="number" name="mobile" value="{{id.mobile}}"><br><br>
+        <input type="email" name="email" value="{{id.email}}"><br><br>
+        <input type="password" name="password" value="{{id.password}}"><br><br>
+        <input type="password" name="repeatepassword" value="{{id.repeatepassword}}"><br><br>
+        <input type="text" name="address" value="{{id.address}}"><br><br>
+        <input type="text" name="city" value="{{id.city}}"><br><br>
+        <input type="text" name="state" value="{{id.state}}"><br><br>
+        <input type="submit" value="Update Data">
+    </form>
+</body>
+</html>
